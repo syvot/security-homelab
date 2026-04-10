@@ -1,4 +1,4 @@
-# Security-Homelab
+# security-homelab
 Cybersecurity homelab built with Ubuntu, KVM/QEMU, and Kali Linux
 
 ## Overview
