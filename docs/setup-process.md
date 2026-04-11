@@ -8,7 +8,13 @@ The first step in building the homelab was installing the required KVM/QEMU and 
 
 ## Adding User to libvirt Group
 
-To allow the current user to manage virtual machines without requiring elevated privileges for every operation, the user was added to the `libvirt` group.
+To allow the current user to manage virtual machines without requiring root privileges, the user was added to the `libvirt` group using the following command:
+
+```bash
+sudo usermod -aG libvirt $USER
+```
+
+After this change, a system reboot is required for the new group permissions to take effect.
 
 ![Add User to libvirt Group](../screenshots/02-add-user-to-libvirt-group.png)
 
