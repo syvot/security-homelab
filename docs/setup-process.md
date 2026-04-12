@@ -63,3 +63,47 @@ This allows adjusting hardware settings such as RAM, CPU, and storage before boo
 The installation was performed using the graphical installer provided by Kali Linux.
 
 ![Kali Installer](../screenshots/11-kali-graphical-installer.png)
+
+## Updating the System
+
+After installation, the Kali Linux system was updated to ensure all packages were up to date.
+
+```bash
+sudo apt update && sudo apt upgrade -y
+```
+
+![Update Kali](../screenshots/12-update-kali-system.png)
+
+## Installing Guest Agents
+
+To improve integration between the host and the virtual machine (such as better display handling and performance), guest agent tools were installed.
+
+```bash
+sudo apt install qemu-guest-agent spice-vdagent -y
+```
+
+![Install Guest Agents](../screenshots/13-install-guest-agents.png)
+
+## Enabling Guest Services
+
+The guest agent service was enabled and started to allow proper communication between host and guest.
+
+```bash
+sudo systemctl enable --now qemu-guest-agent
+```
+
+![Enable Guest Services](../screenshots/14-enable-guest-services.png)
+
+## Verifying Guest Agent Status
+
+The service status was verified to ensure it was running correctly.
+
+![Guest Agent Running](../screenshots/17-guest-services-running.png)
+
+## Final Result
+
+The virtual machine was successfully installed and configured, with Kali Linux running smoothly inside the KVM environment.
+
+![Kali Desktop](../screenshots/15-kali-desktop-running.png)
+
+![VM Running](../screenshots/16-vm-running-in-virt-manager.png)
