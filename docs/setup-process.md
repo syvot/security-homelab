@@ -31,3 +31,35 @@ The virtualization stack was verified by checking libvirt functionality and load
 ![Verify virsh](../screenshots/04-verify-libvirt-with-virsh.png)
 
 ![Verify KVM Modules](../screenshots/05-verify-kvm-kernel-modules.png)
+
+## Creating the Virtual Machine
+
+The virtual machine was created using virt-manager by selecting the option to create a new VM.
+
+![Create VM](../screenshots/07-create-new-virtual-machine.png)
+
+## ISO Detection Issue
+
+During the setup process, virt-manager failed to automatically detect the Kali Linux ISO.
+
+![ISO Detection Error](../screenshots/08-iso-detection-error.png)
+
+## Manual OS Selection
+
+To resolve this issue, automatic OS detection was disabled and Debian 12 was selected manually, since Kali is Debian-based.
+
+![Manual Debian Selection](../screenshots/09-manual-debian-selection.png)
+
+## Customizing VM Configuration
+
+Before starting the installation, the option to customize the virtual machine configuration was enabled.
+
+This allows adjusting hardware settings such as RAM, CPU, and storage before booting the installer.
+
+![Customize VM](../screenshots/10-customize-vm-before-install.png)
+
+## Kali Linux Installation
+
+The installation was performed using the graphical installer provided by Kali Linux.
+
+![Kali Installer](../screenshots/11-kali-graphical-installer.png)
